@@ -1,8 +1,18 @@
 const robotsParser = require('robots-parser');
-const fetch = require('node-fetch');
 
-const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24h, per spec
-const cache = new Map(); // domain -> { robots, fetchedAt }
+const CACHE_TTL_MS = 24 * 60 * 60 * 1000;
+const cache = new Map();
+
+async function fetchWithTimeout(url, timeoutMs = 5000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const res = await fetch(url, { signal: controller.signal });
+    return res;
+  } finally {
+    clearTimeout(timer);
+  }
+}
 
 async function getRobotsForDomain(domain) {
   const cached = cache.get(domain);
@@ -14,11 +24,10 @@ async function getRobotsForDomain(domain) {
   let robotsTxt = '';
 
   try {
-    const res = await fetch(robotsUrl, { timeout: 5000 });
+    const res = await fetchWithTimeout(robotsUrl, 5000);
     if (res.ok) {
       robotsTxt = await res.text();
     }
-    // if robots.txt doesn't exist or errors, treat as "allow all" (standard practice)
   } catch (err) {
     robotsTxt = '';
   }
@@ -31,7 +40,7 @@ async function getRobotsForDomain(domain) {
 async function isAllowed(url, userAgent = 'DatareyBot') {
   const domain = new URL(url).hostname;
   const robots = await getRobotsForDomain(domain);
-  return robots.isAllowed(url, userAgent) !== false; // default allow if undetermined
+  return robots.isAllowed(url, userAgent) !== false;
 }
 
 module.exports = { isAllowed, getRobotsForDomain };

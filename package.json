@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-   
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/",
     "dev": "node src/test-fetch.js"
@@ -16,7 +15,9 @@
   "dependencies": {
     "dotenv": "^17.4.2",
     "ioredis": "^5.11.1",
-    "playwright": "^1.61.1"
+    "node-fetch": "^2.7.0",
+    "playwright": "^1.61.1",
+    "robots-parser": "^3.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

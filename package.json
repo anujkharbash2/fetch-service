@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+   
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/",
+    "dev": "node src/test-fetch.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +17,11 @@
     "dotenv": "^17.4.2",
     "ioredis": "^5.11.1",
     "playwright": "^1.61.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.6.0",
+    "globals": "^17.7.0",
+    "prettier": "^3.9.4"
   }
 }

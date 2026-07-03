@@ -2,11 +2,14 @@ const Redis = require('ioredis');
 const { fetchPage } = require('./fetchPage');
 const { isAllowed } = require('./robotsCache');
 const { waitForSlot } = require('./rateLimiter');
+const { fetchWithRetry } = require('./fetchWithRetry');
+const { ProxyManager } = require('./proxyManager');
 
 const redis = new Redis(process.env.REDIS_URL || 'redis://localhost:6379');
 const STREAM = 'fetch-jobs';
 const GROUP = 'fetch-workers';
 const CONSUMER = `worker-${process.pid}`;
+const proxyManager = new ProxyManager(); 
 
 async function ensureGroup() {
   try {
@@ -32,7 +35,7 @@ async function processJob(id, fields) {
   // Politeness gate — respect per-domain rate limit
   await waitForSlot(payload.url);
 
-  const result = await fetchPage(payload.url, payload.options);
+  const result = await fetchWithRetry(payload.url, payload.options);
   console.log('Result:', payload.id, {
     status: result.statusCode,
     ms: result.renderTimeMs,

@@ -1,4 +1,6 @@
 const { chromium } = require('playwright');
+const { detectBlock } = require('./blockDetector');
+
 
 async function fetchPage(url, options = {}) {
   const {
@@ -12,6 +14,7 @@ async function fetchPage(url, options = {}) {
 
   try {
     const launchOptions = { headless: true };
+
 
     if (proxy) {
       launchOptions.proxy = {
@@ -31,13 +34,14 @@ async function fetchPage(url, options = {}) {
     const html = await page.content();
     const statusCode = response ? response.status() : null;
     const finalUrl = page.url();
+    const blockSignal = detectBlock({ html, statusCode });
 
     await browser.close();
 
     return {
       html, statusCode,
       renderTimeMs: Date.now() - startTime,
-      finalUrl, error: null,
+      finalUrl, error: blockSignal,
       proxyId: proxy ? proxy.id : null,
     };
   } catch (err) {
@@ -52,7 +56,8 @@ async function fetchPage(url, options = {}) {
 }
 
 function classifyError(err) {
-  const msg = err.message || '';
+
+  const msg = err.message || ''; 
   if (msg.includes('Timeout')) return 'TIMEOUT';
   if (msg.includes('net::ERR_NAME_NOT_RESOLVED')) return 'DNS_FAIL';
   if (msg.includes('net::ERR_INVALID_URL')) return 'INVALID_URL';

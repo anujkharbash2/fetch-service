@@ -3,45 +3,50 @@ const { chromium } = require('playwright');
 async function fetchPage(url, options = {}) {
   const {
     timeoutMs = 15000,
-    waitUntil = 'load',      // 'load' | 'domcontentloaded' | 'networkidle'
+    waitUntil = 'load',
+    proxy = null, // { id, host, port, username, password }
   } = options;
 
   const startTime = Date.now();
   let browser;
 
   try {
-    browser = await chromium.launch({ headless: true });
+    const launchOptions = { headless: true };
+
+    if (proxy) {
+      launchOptions.proxy = {
+        server: `http://${proxy.host}:${proxy.port}`,
+        username: proxy.username,
+        password: proxy.password,
+      };
+    }
+
+    browser = await chromium.launch(launchOptions);
     const context = await browser.newContext({
-      userAgent: 'DataReyBot/1.0 (+https://dataloom.example/bot)', // truthful UA, per doc
+      userAgent: 'DatareyBot/1.0 (+https://datarey.example/bot)',
     });
     const page = await context.newPage();
 
-    const response = await page.goto(url, {
-      timeout: timeoutMs,
-      waitUntil,
-    });
-
+    const response = await page.goto(url, { timeout: timeoutMs, waitUntil });
     const html = await page.content();
     const statusCode = response ? response.status() : null;
-    const finalUrl = page.url(); // captures redirects
+    const finalUrl = page.url();
 
     await browser.close();
 
     return {
-      html,
-      statusCode,
+      html, statusCode,
       renderTimeMs: Date.now() - startTime,
-      finalUrl,
-      error: null,
+      finalUrl, error: null,
+      proxyId: proxy ? proxy.id : null,
     };
   } catch (err) {
     if (browser) await browser.close();
     return {
-      html: null,
-      statusCode: null,
+      html: null, statusCode: null,
       renderTimeMs: Date.now() - startTime,
-      finalUrl: url,
-      error: classifyError(err),
+      finalUrl: url, error: classifyError(err),
+      proxyId: proxy ? proxy.id : null,
     };
   }
 }

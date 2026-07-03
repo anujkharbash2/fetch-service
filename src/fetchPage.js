@@ -12,7 +12,7 @@ async function fetchPage(url, options = {}) {
   try {
     browser = await chromium.launch({ headless: true });
     const context = await browser.newContext({
-      userAgent: 'DataLoomBot/1.0 (+https://dataloom.example/bot)', // truthful UA, per doc
+      userAgent: 'DataReyBot/1.0 (+https://dataloom.example/bot)', // truthful UA, per doc
     });
     const page = await context.newPage();
 

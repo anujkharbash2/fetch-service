@@ -31,12 +31,25 @@ async function fetchPage(url, options = {}) {
       userAgent: 'DatareyBot/1.0 (+https://datarey.example/bot)',
     });
     const page = await context.newPage();
+    await page.route('**/*', (route) => {
+  const blockedTypes = ['image', 'stylesheet', 'font', 'media'];
+  if (blockedTypes.includes(route.request().resourceType())) {
+    route.abort();
+  } else {
+    route.continue();
+  }
+});
 
     const response = await page.goto(url, { timeout: timeoutMs, waitUntil });
     const html = await page.content();
     const statusCode = response ? response.status() : null;
     const finalUrl = page.url();
     const blockSignal = detectBlock({ html, statusCode });
+    if (blockSignal) {
+        console.log('--- BLOCK DETECTED, first 300 chars ---');
+        console.log(html ? html.slice(0, 300) : '(no html)');
+        console.log('status:', statusCode);
+    }
 
     await browser.close();
 

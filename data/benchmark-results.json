@@ -1,0 +1,669 @@
+[
+  {
+    "category": "easy_static",
+    "url": "https://httpbin.org/html",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 2191,
+    "attempts": 2
+  },
+  {
+    "category": "easy_static",
+    "url": "https://httpbin.org/forms/post",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 2281,
+    "attempts": 1
+  },
+  {
+    "category": "easy_static",
+    "url": "https://httpbin.org/robots.txt",
+    "outcome": "BLOCKED",
+    "statusCode": 503,
+    "renderTimeMs": 1571,
+    "attempts": 4
+  },
+  {
+    "category": "easy_static",
+    "url": "https://httpbin.org/status/200",
+    "outcome": "BLOCKED",
+    "statusCode": 503,
+    "renderTimeMs": 1609,
+    "attempts": 4
+  },
+  {
+    "category": "easy_static",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 4062,
+    "attempts": 1
+  },
+  {
+    "category": "easy_static",
+    "url": "https://www.gutenberg.org/ebooks/1342",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 11844,
+    "attempts": 2
+  },
+  {
+    "category": "easy_static",
+    "url": "https://www.gutenberg.org/ebooks/11",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 5516,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://www.thehindu.com/news/national/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 11321,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://www.thehindu.com/news/international/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 7130,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://www.thehindu.com/business/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 6610,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://www.thehindu.com/entertainment/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 6354,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://www.thehindu.com/entertainment/movies/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 5791,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://www.thehindu.com/sci-tech/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 5963,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://www.thehindu.com/sci-tech/technology/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 6201,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://www.thehindu.com/sci-tech/health/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 5990,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://www.thehindu.com/opinion/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 5919,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://www.thehindu.com/news/cities/bangalore/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 5981,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://www.thehindu.com/news/cities/chennai/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 6125,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://www.thehindu.com/todays-paper/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 6164,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://www.thehindu.com/videos/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 6203,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://www.thehindu.com/photos/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 5928,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://www.thehindu.com/podcast/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 5937,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://indianexpress.com/section/india/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 8212,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://indianexpress.com/section/cities/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 8523,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://indianexpress.com/section/world/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 9286,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://indianexpress.com/section/opinion/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 7894,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://indianexpress.com/section/business/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 6775,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://indianexpress.com/section/business/market/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 7894,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://indianexpress.com/section/business/economy/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 8640,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://indianexpress.com/section/sports/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 7829,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://indianexpress.com/section/explained/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 8055,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://indianexpress.com/section/research/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 7631,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://indianexpress.com/section/trending/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 7913,
+    "attempts": 1
+  },
+  {
+    "category": "news_india",
+    "url": "https://indianexpress.com/e-paper/",
+    "outcome": "SUCCESS",
+    "statusCode": 404,
+    "renderTimeMs": 5190,
+    "attempts": 1
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.flipkart.com/search?q=laptop",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.flipkart.com/search?q=smartphone",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.flipkart.com/search?q=headphones",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.flipkart.com/search?q=running+shoes",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.flipkart.com/search?q=smart+watch",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.flipkart.com/search?q=furniture",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.flipkart.com/search?q=kitchen+appliances",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.flipkart.com/search?q=television",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.flipkart.com/mobile-phones-store",
+    "outcome": "BLOCKED",
+    "statusCode": 403,
+    "renderTimeMs": 6458,
+    "attempts": 4
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.flipkart.com/grocery-supermart-store",
+    "outcome": "BLOCKED",
+    "statusCode": 403,
+    "renderTimeMs": 6342,
+    "attempts": 4
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.flipkart.com/beauty-and-personal-care-store",
+    "outcome": "BLOCKED",
+    "statusCode": 403,
+    "renderTimeMs": 6415,
+    "attempts": 4
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.flipkart.com/toys-and-baby-care-store",
+    "outcome": "BLOCKED",
+    "statusCode": 403,
+    "renderTimeMs": 6204,
+    "attempts": 4
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.flipkart.com/sports-and-fitness-store",
+    "outcome": "BLOCKED",
+    "statusCode": 403,
+    "renderTimeMs": 6112,
+    "attempts": 4
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.flipkart.com/books-store",
+    "outcome": "BLOCKED",
+    "statusCode": 403,
+    "renderTimeMs": 6399,
+    "attempts": 4
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.amazon.in/s?k=laptop",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 3625,
+    "attempts": 1
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.amazon.in/s?k=smartphone",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 3659,
+    "attempts": 1
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.amazon.in/s?k=headphones",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 3714,
+    "attempts": 1
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.amazon.in/s?k=tablet",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 3558,
+    "attempts": 1
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.amazon.in/s?k=bluetooth+speaker",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 4004,
+    "attempts": 1
+  },
+  {
+    "category": "ecommerce_india",
+    "url": "https://www.amazon.in/gp/goldbox",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 3692,
+    "attempts": 1
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.google.com/search?q=test",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.google.com/search?q=web+scraping",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.google.com/maps/search/restaurants+near+me",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 2279,
+    "attempts": 1
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.google.com/flights",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 2588,
+    "attempts": 1
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.google.com/travel/hotels",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 2438,
+    "attempts": 1
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://twitter.com/search?q=AI",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://x.com/home",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.linkedin.com/feed/",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=engineer",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.instagram.com/explore/",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.airbnb.com/s/homes",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 4044,
+    "attempts": 1
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.airbnb.com/s/Goa/homes",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.youtube.com/results?search_query=web+scraping",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "outcome": "BLOCKED",
+    "statusCode": 429,
+    "renderTimeMs": 6423,
+    "attempts": 4
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.netflix.com/browse",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.reddit.com/r/webscraping/",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.reddit.com/search/?q=scraping",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.pinterest.com/search/pins/?q=design",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.notion.so",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 4158,
+    "attempts": 1
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.figma.com/community",
+    "outcome": "BLOCKED",
+    "statusCode": 403,
+    "renderTimeMs": 1398,
+    "attempts": 4
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://codepen.io/trending",
+    "outcome": "BLOCKED",
+    "statusCode": 403,
+    "renderTimeMs": 4611,
+    "attempts": 4
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://observablehq.com/explore",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 4376,
+    "attempts": 1
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://github.com/search?q=web+scraper&type=repositories",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.npmjs.com/search?q=puppeteer",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 3922,
+    "attempts": 4
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://stackoverflow.com/questions/tagged/web-scraping",
+    "outcome": "BLOCKED",
+    "statusCode": 403,
+    "renderTimeMs": 4733,
+    "attempts": 4
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.zomato.com/jaipur",
+    "outcome": "SKIPPED_ROBOTS"
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.swiggy.com",
+    "outcome": "BLOCKED",
+    "statusCode": 403,
+    "renderTimeMs": 1407,
+    "attempts": 4
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.myntra.com",
+    "outcome": "UNKNOWN_ERROR",
+    "statusCode": null,
+    "renderTimeMs": 1428,
+    "attempts": 1
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://open.spotify.com/search/lofi",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 8070,
+    "attempts": 1
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.booking.com/searchresults.html?ss=Jaipur",
+    "outcome": "SUCCESS",
+    "statusCode": 202,
+    "renderTimeMs": 3056,
+    "attempts": 1
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.trivago.com",
+    "outcome": "BLOCKED",
+    "statusCode": 403,
+    "renderTimeMs": 1412,
+    "attempts": 4
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.indeed.com/jobs?q=software+engineer&l=India",
+    "outcome": "BLOCKED",
+    "statusCode": 403,
+    "renderTimeMs": 4685,
+    "attempts": 4
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.glassdoor.co.in/Job/india-jobs.htm",
+    "outcome": "BLOCKED",
+    "statusCode": 403,
+    "renderTimeMs": 5275,
+    "attempts": 4
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://www.canva.com/templates/",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 6682,
+    "attempts": 1
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://trello.com",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 8465,
+    "attempts": 1
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://slack.com",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 8199,
+    "attempts": 1
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://finance.yahoo.com/quote/AAPL",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 4665,
+    "attempts": 1
+  },
+  {
+    "category": "hard_js_heavy",
+    "url": "https://web.whatsapp.com",
+    "outcome": "SUCCESS",
+    "statusCode": 200,
+    "renderTimeMs": 3707,
+    "attempts": 1
+  }
+]

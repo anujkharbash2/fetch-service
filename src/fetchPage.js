@@ -24,7 +24,9 @@ async function fetchPage(url, options = {}) {
       };
     }
 
-    browser = await chromium.launch(launchOptions);
+    browser = await chromium.launch( {headless: true,
+  args: ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu'],
+  ...launchOptions,});
     const context = await browser.newContext({
       userAgent: 'DatareyBot/1.0 (+https://datarey.example/bot)',
     });

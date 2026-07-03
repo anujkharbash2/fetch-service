@@ -4,6 +4,8 @@ const { isAllowed } = require('./robotsCache');
 const { waitForSlot } = require('./rateLimiter');
 const { fetchWithRetry } = require('./fetchWithRetry');
 const { ProxyManager } = require('./proxyManager');
+const { isSafeUrl } = require('./urlSafety');
+
 
 const redis = new Redis(process.env.REDIS_URL || 'redis://localhost:6379');
 const STREAM = 'fetch-jobs';
@@ -22,6 +24,14 @@ async function ensureGroup() {
 async function processJob(id, fields) {
   const payload = JSON.parse(fields[1]);
   console.log('Processing:', payload.id, payload.url);
+
+  // Security gate — MUST be first, before any network activity
+  const safety = await isSafeUrl(payload.url);
+  if (!safety.safe) {
+    console.log('BLOCKED (unsafe URL):', payload.url, safety.reason);
+    await redis.xack(STREAM, GROUP, id);
+    return;
+  }
 
   // Compliance gate — check robots.txt first
   const allowed = await isAllowed(payload.url);

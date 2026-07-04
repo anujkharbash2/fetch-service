@@ -15,9 +15,9 @@ async function fetchWithRetry(url, options = {}, proxyManager = null) {
     let proxy;
     try {
       proxy = proxyManager ? proxyManager.getNext() : options.proxy;
-    } catch (err) {
-      return { error: 'NO_PROXIES_AVAILABLE', statusCode: null, html: null, attempts: attempt };
-    }
+    } catch {
+  return { error: 'NO_PROXIES_AVAILABLE', statusCode: null, html: null, attempts: attempt };
+}
 
     lastResult = await fetchPage(url, { ...options, proxy });
     if (proxyManager) {

@@ -51,9 +51,9 @@ async function isSafeUrl(urlString) {
     const blocked = addresses.some(ip => isBlockedIp(ip));
     if (blocked) return { safe: false, reason: 'PRIVATE_IP_VIA_DNS' };
     return { safe: true };
-  } catch (err) {
-    return { safe: false, reason: 'DNS_RESOLUTION_FAILED' };
-  }
+  } catch {
+  return { safe: false, reason: 'DNS_RESOLUTION_FAILED' };
+}
 }
 
 module.exports = { isSafeUrl };

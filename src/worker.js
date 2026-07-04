@@ -1,5 +1,5 @@
 const Redis = require('ioredis');
-const { fetchPage } = require('./fetchPage');
+
 const { isAllowed } = require('./robotsCache');
 const { waitForSlot } = require('./rateLimiter');
 const { fetchWithRetry } = require('./fetchWithRetry');
@@ -45,7 +45,7 @@ async function processJob(id, fields) {
   // Politeness gate — respect per-domain rate limit
   await waitForSlot(payload.url);
 
-  const result = await fetchWithRetry(payload.url, payload.options);
+  const result = await fetchWithRetry(payload.url, payload.options, proxyManager);
   console.log('Result:', payload.id, {
     status: result.statusCode,
     ms: result.renderTimeMs,

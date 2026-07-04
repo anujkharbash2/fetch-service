@@ -28,9 +28,9 @@ async function getRobotsForDomain(domain) {
     if (res.ok) {
       robotsTxt = await res.text();
     }
-  } catch (err) {
-    robotsTxt = '';
-  }
+  } catch {
+  robotsTxt = '';
+}
 
   const robots = robotsParser(robotsUrl, robotsTxt);
   cache.set(domain, { robots, fetchedAt: Date.now() });

@@ -26,9 +26,9 @@ async function runBenchmark() {
       let result;
       try {
         result = await fetchWithRetry(url, {}, manager);
-      } catch (err) {
-        result = { error: 'CRASHED', statusCode: null, renderTimeMs: 0, attempts: 0 };
-      }
+      } catch {
+  result = { error: 'CRASHED', statusCode: null, renderTimeMs: 0, attempts: 0 };
+}
 
       results.push({
         category, url,
